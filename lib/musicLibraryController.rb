@@ -4,7 +4,11 @@ class MusicLibraryController
     MusicImporter.new(path).import
   end
   
+<<<<<<< HEAD
   def call 
+=======
+    def call 
+>>>>>>> 673ce82bf44862ee7cdfecf5fa1f8c3f9ff4d633
     
     input = ""
     
@@ -38,6 +42,7 @@ class MusicLibraryController
     end
   end
   
+<<<<<<< HEAD
   def list_songs
     Song.all.sort{ |a,b| a.name <=> b.name}.each.with_index(1) do |song, index|
       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
@@ -86,4 +91,11 @@ class MusicLibraryController
 
     puts "Playing #{song.name} by #{song.artist.name}" if song
   end
+=======
+    def list_songs
+        list = Song.all.sort {|a, b| a.name <=> b.name}
+        list.each_with_index {|e, i| puts "#{i + 1}. #{e.artist.name} - #{e.name} - #{e.genre.name}"}
+    end
+
+>>>>>>> 673ce82bf44862ee7cdfecf5fa1f8c3f9ff4d633
 end
